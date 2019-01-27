@@ -1,0 +1,1159 @@
+social networking code
+- admin, user, notification,user checkin, admin cancel, notification
+
+
+fundamental:
+- software engineering mindset 
+
+
+Advanced Topics
+- notification
+
+
+Architecture and automated testing
+------------------------------
+connect with tfs:
+1. create visual studio online account and open azure dev
+2. create project.
+3. open visual studio and connect with team foundation server project
+4. goto source control and map the project to local folder
+5. add new project on that folder and when create new proejct check add source to source control
+
+------------------------
+Similarly if Git then
+connect to git using git repository first before launching the project in the visual studio. Then check add to source control and then it should be fine with the git source control
+
+---------------
+note: both tfs and git has similar type of .git files directory. 
+
+-------------
+jetbrains.com//Resharper //30 day
+productivity power tool
+web essentials//tools->extension and update
+
+
+----------------
+core usecases first
+//impact and design
+
+
+Requirements document look:
+
+//extract use cases
+For: GitHub mini social nw easy live music -track gigs favourite
+-signup, list gigs, add gigs , 
+page, edit remove existging gig
+upcoming gigs, search by artist, genre/location. view details of each gig and add it to the calendar
+
+- user should follow their favourite artist, they shuould see upcoming gigs of their favourite artiss in the gig feeds.
+
+----------------
+http://localhost:56451
+
+//windows update is a solution for many problems. 
+
+----------------my usecase------
+Extract use cases
+usecase 1: track gigs by artist
+u 2: signup
+u 3: add, edit, delete, details of a gig and list gigs  for a artist
+u 4: add gig into calendar
+u 5: advanced search by artist,genre/location
+u 6: user follow favourite artist
+u 7: gigs feed of artist feed should come to user profile
+
+--------------
+calendar: appointment, schedule, address, contact list, call, email, 
+--------------
+u 1: authentication module: signup, login,logout,change password, edit profile, view profile(op)//its done by template
+
+u 2: gig module: add a gig, my upcoming gigs(for artist), edit a gig, remove a gig, view all upcoming gigs, view all upcoming gigs, search, view gig details
+
+u 3: gig calendar: add a gig to a calendar, remove a gig from a calendar, view gigs I'm attending
+
+u 4: follow module: follow an arist, unfollow an artist, who I am following, gig feed
+
+
+
+*** update stories in backlog
+
+-------------
+Find work dependency first which is required for architecting the document
+
+if (view gigs - 1) then we can (follow artist - 2); (follow artist) then we can (unfollow artist -3)//dependency
+
+so implement 1, then 2, then 3
+
+****update dependencies
+
+
+Orders of dependency by me for usecases (except authentication module)
+#gig module
+add gig, edit gig, delete gig, view gig details, view list of gigs
+
+#gig calendar
+add a gig to a calendar, remove a gig from a calendar, view gigs I'm attending
+
+#follow module
+follow artist, unfollow artist, gigs feed by artist
+
+
+ 
+
+
+
+//tutor usecase with order of dependency
+//here artist can add a gig; user can follow artists
+//if user is mentioned in bracket, meaning who follow artist 
+
+1 add a gig
+
+2 my upcoming gigs, all upcoming gigs 
+
+3 edit a gig, remove a gig, add a gig to a calendar, follow an artist (user), search(user), view gig details(user)
+
+4 view gigs I am attending, who I am following, gig feeds 
+
+5 remove a gig from calendar, unfollow an artist(user)
+
+
+----------------------------------------------------------------
+identify core usecases
+
+add a gig --- ***** 1 (changes the state of the application)
+
+remove a gig
+follow an artist --- **** 2 
+add a gig to calendar (to keep track the gigs they are attending)
+
+remove a gig from calendar   ----*** 3
+unfollow an artist
+
+view gigs I am attending
+who i'am following                         //these are supporting to demonstrate that our application works
+we need supporting usecases like sql insert // ---- ****4 
+
+
+to show them whether application is working or not we need to pick core usecases to implement
+//sometimes need some supporting usecases 
+
+
+--------------------------
+Planning first iteration
+summary of core usecases: add a gig, all upcoming gigs,add agig to calendar,follow an artist, view gigs I'm attending, who I'm following
+
+- agile team iteration involves 2-3 weeks long
+
+- do order of user stories
+-------------------------------
+
+Sketch User Experiences
+- forms and redirection and button status changes
+- navigation bar: menu and menuitems
+
+Code first 
+
+//if error then reinstall entity framework
+//no context type found:: add a model class where DBContext exist and type only enable-migrations thats all
+1. enable code migration 
+ package manager console
+  initializing powershell host
+   enable-migrations
+2. 
+---
+add-migrations
+update-database
+
+//aim for small migrations
+//small changes small migrations
+
+
+
+-----------------
+how to resolve 2 project in tfs
+- make separate root folder in local
+- make separate root folder in tfs
+- map them correctly
+- when update, select each project separately and do checked in
+-----------
+
+
+//agile vs scrum
+*in agile it is userstory
+   in scrum it is product backlog item
+
+*in agile it is iteration
+    in scrum it is sprint 
+
+The product owner creates a PBI or a tester creates a bug in the New state with the default reason, New backlog item
+The product owner moves the item to Approved after it is sufficiently described and ready for the team to estimate the level of effort. Most of the time, items near the top of the Product Backlog are in the Approved state, while items toward the middle and bottom are in a New state
+The team updates the status to Committed when they decide to commit to working on it during the sprint
+The item is moved to the Done state when the team has completed all its associated tasks and the product owner agrees that it has been implemented according to the Acceptance Criteria.
+
+------------
+agile: new, active, close
+scrum: new, commited, done
+
+C:\Shakil\Projects\Team Project GigHub\GigHub\GigHub
+
+How to map: 
+- refresh the source, remove the existing map, then create new workspace map and update the directory, then click on the body of workspace and select root folder and click finish, then check pending changes and commit changes. 
+---------------
+
+
+//Correct mapping
+- in vs 2015: get the source control link in team viewer and keep the current project with source control selected
+- add a project and click add source control
+
+*** a popup will comes and display mapping, make sure this window you fix the mapping you need. 
+
+
+----------------------------
+add-migration; update-database
+
+aim:small migration
+
+domain classes
+
+in class design: remmeber: 
+  use where, when, how information
+
+tools=>productiveity power tool
+  setup //remove unused refer during save
+
+//format document on save 
+
+///dont create giantic model
+   ; but small then complete following
+
+//update keyboard shortcut
+//show pakcagemanagerconsole
+Alt(/ then .)=> Alt+/, Alt+.
+
+
+-- add-migration CreateGigTable
+
+//go back: ctrl+tab 
+
+//resharper : rename file name
+   alt+enter
+
+//close all window
+  alt+w, L
+
+//force same name add migration
+
+add-migration CreateGigTable -force
+
+jobeda: jsh@kil4
+
+//convention over config
+
+//override codefirst convention
+data annotation || Fluent API
+
+
+
+ctrl+tab => like tab of vs 
+
+
+resharper->options->env->resharper keyboard
+
+//ctrl+sh+N//file search with resharper
+
+//code first create table with default settings that need to be override using data annotation
+
+ 
+//design decision(based on cost and benefit)-- u the software enigeer
+sol:
+admin(overkill, more overhead) or script? script(ok) 
+
+//script 
+
+up method:database could be upgraded and 
+down method:database could be downgraded; opposite of up method
+
+//DUPLICATE WITH RESHARPER
+CTROL+D
+
+//do: udpate-database to see the data
+
+//click on the folder where file changes and then right click will appear the undo pending changes
+
+
+//if design you are not follow your guts then you will die 
+as a software engineers
+
+by calculating the list of consequences.
+
+-------------
+learning curve: for full stack developer
+1. react
+2. angularjs
+
+why need shelvesets
+- interruption
+- collaboration 
+- code review
+
+
+---------------------
+module review: 
+- build a simple domain model
+- aim for small code-first migrations
+- commit to the repo often
+- use shortcuts
+- its your job to make design decisions not others//think all decisions cost and benefits
+
+------------
+forms and bootstrap, viewmodel
+
+ui:
+goto view and add view, name should be same as defined in the controller
+
+ctrl+F5 //run
+
+
+
+//https://getbootstrap.com/docs/3.4/css/#forms
+
+
+
+copy//control+D
+
+
+//presentation model, viewmodel
+
+//resharper shortcut
+alt+ent
+
+readonly : because it only initialize in the constructor and it will not be used anywhere else
+
+//after add/edit done, do review
+check anything to improve or update, then commit
+
+bootstrap
+- use responsive model 
+
+View Model Pattern//
+- Provides clean separation between uI and domain
+
+saving data:
+//separation of concern 
+
+only allow authenticated users
+
+//authorization
+[Authorize]
+
+//resharper selection tool in view
+ctrol+(continue selection W) //extend
+ctrol+(continue sh+w)//shrink
+
+//resharper selection c#
+alt+(hold down arrow, up arrow)
+//to move cursor up and down
+
+//if user.identity.getuserid
+does not recognize then
+
+//do not form the form again
+
+save
+build
+back to the error view: press ctrl+r//press continue
+
+//if we call _context two time for 2 variables then it will travel 2 times to the database; how to resolve this rroundtrip??
+sol: create userid 
+
+//resharper goto definition
+ctrl+B
+
+//do update Gig class to not sending data for two variables
+
+//then save
+add-migration AddForeignKeyPropertiesToGig
+
+domain model modified, database is modified, and remove unnecessary plan
+
+
+//ctrl+shf+
+
+
+//domani model and viewmodel should be same type
+
+
+cntr+sh+R// activate refactoring
+
+//
+
+
+//poor separation of concern
+controller: what should happen
+  its like a manager
+  people do the actually works
+
+
+//sheff: does cooking
+
+review
+- User.Identity.GetUserId()//string
+- Foreing key properties//little better
+//require for lessenign coding
+- Information Expert Principle//concern of separation
+// move responsiblity from controller to viewmodel
+which is separation of concern
+//cooker should cook; waiter should serve 
+
+identity.getuserid is guid string
+
+where the information stored, thats where the information should be respnsible; like 
+
+
+when assign responsiblity: first determine where the information comes from; then where it will be store, there we should store the responsibitlity. 
+------------
+validation
+
+server side validation
+
+create if model is valid
+if not return to same view
+otherwise home page
+
+run: ctrl+f5
+
+
+//datetime issue: asp.net mvc uses reflection to see the gigformviewmodel and hence caught exception; so, 
+
+
+Rename: F2
+
+ctrl+w
+ctrl+x
+
+ctrl+v//paste
+
+
+Build sequence
+build: control+sh+b; thne go to browser ctrl+r//to repost
+
+
+//make sure what user puts are the valid date
+
+
+//convert.ToString vs .ToString
+the second one should be used when we make sure that the value is not null
+
+//select the selected method
+ctrol+w
+//copy paste
+ctrl+D
+
+//move to a new file 
+ctrl+alt+ent and 
+select the point to move to a new file
+
+//how to enable client side validation
+//bundleconfig
+//jquery.validate
+//jqurey.
+
+
+in layout view: 
+you can see all the layout loaded script
+
+in create view, you need to keep script render inside a script using @render for client side validation. 
+
+
+//if you now check network tab and hit save button you will not see any client server data transfer because of client side validation
+//this is all data annotation
+
+dataannotatoin: both server and client side validation
+- required, range, minlength, maxlength, phone, emailaddress, regularexpress,
+
+#remmeber to add jqeuryval at each page you need client side validation. 
+
+section: preventing common web application vulnerablities
+
+sql injecting
+cross site request forgery
+cross site scritping
+
+
+sql injection: 
+- malicious sql execution
+
+
+var sql="select * from users where userid="+userid;
+
+"1234 or 1=1"//meaning either userid 1234 or any user
+
+prevent: parameterized query
+
+we are doing: 
+_context.Gigs.Add(gig);
+
+sql vulnerable would be if: 
+_context.Gigs.SqlQuery("select * from.."+input)
+
+
+------------------
+XSS cross site scripting
+malicious script
+//users cookies hijacked,
+web cam, filesystem...geo
+
+prevent XSS: 
+use escaping content
+raw data: <script>)-> Escaped data: &alt;script&gt; 
+
+-asp.net mvc rejects javascript in input
+- Razor views escape content
+
+only vulneralbe if using 
+   Html.Raw()
+
+--------------
+CSRF - 
+Transfer money from source to diverted illegitimate account
+
+here in post method, in the same browser, when click any website icon or button, it can get the session data and session and update the scripted form and update the account information, 
+
+//it is hard to detect the intrusion because everythign looks legitimate operation even entering account valid information.
+
+//allows an attacker to perform actions on behalf of a user without their knowledge
+
+//any content
+
+Prevent: 
+1. in view
+using(html.BeginForm()){
+@Html.AntiForgeryToken()
+}
+
+2. in controller
+
+[ValidateAntiForgeryToken]
+public ActionResult Create()
+
+
+simulate antiforgery token
+check element tab inside beginform and application tab inside cookies requestverificationtoken
+ you will see the token value
+
+
+asp.net will compare these two values from elements and application cookies; if they match that is a legitimate  request otherwise csrf attack.
+
+ because user could have access to cookies but not hidden field. 
+
+to simulate: remove elements token value during posting from the browser inspect element. You will see the error .
+
+--------------
+beautiful design:
+colors, meaning, 
+
+meanign of color:
+subjective
+warm(red, orange, yellow), cool, nutral
+
+
+red: fire, power, energy, passion, and love
+orange: vibrant, energentic, fund, exciting
+yellow: happiness, sunshine
+
+
+green:calming, healing, natural ,protection
+blue:trust, loyalty, friendliness, 
+
+pink: romantic, feminine, love, beauty
+
+black: powerful,sophisication, formality; sometimes...
+white: clean, perfect, pure
+grey:conservative and formal
+
+
+
+gighub: red and orange
+-fund, passion
+
+-----------
+choosing a font: 
+
+google.com/fonts(free)
+fonts.com
+fontsquirrel.com
+typekit.com
+
+
+---------------------
+fonts link and css select 
+
+---------------
+#put two webpage side by side
+#beside styles there are Computed tab 
+
+
+this font will increase size of http response
+
+where is our stylesheet that font is set?
+
+
+the element text or button you want to change, select the cursor there and click inspect
+
+
+do not change bootstrap.css but override site.css
+--------
+modern and chunky
+
+check all control font and update their css in site.css
+
+when find the css class name update that in site.css and also see the html elements
+
+//to override focus or hover we need to click hover beside filter then you will see force element state. then select focus; u will see the element. uncheck border-shadow, outline 
+
+
+
+border color and outline remove shadow:
+
+#2196f3
+
+//dropdown menuitem in menu
+//getboostrap
+//go under components:
+https://getbootstrap.com/docs/3.4/components/
+
+//u will see the icon boostrap
+
+web build: 
+u build and then refresh using same link; then it will rebuild and refresh the ui
+
+summary:
+design - 
+  -iterative
+#  color meaning
+#  fonts
+  big: youthful
+  small: serious
+
+Override bootstrap styles
+-------------------------
+
+Usability Best Practices
+  - principle
+
+Label: no long text, alignment, 
+   stick to righ aling or top align; good(follow eye movement)
+no ambiguous words
+be concise
+
+Fields: 
+   reduce the # of fields
+   avoid optional fields//capture only really require
+    separate mandatory and optional fields
+   Group related fields
+   specify the format
+   set focus on the first field
+
+//shortcut in view resharper
+ctrl+alt+j//select tag or link or more//surrond with menu
+
+//set autofocus attribute
+
+
+Actioins:
+  - Each form should have a primary action
+ -  avoid secondary actions if possible
+- otherwise visualiy separate them
+- align primary actions with input fields
+
+
+- elements in top left get most attention, bottom right least attension
+
+------------
+validation message
+
+-provide clear validation msg
+- red: error, green: success
+- goal: reduce user stress
+- Provide smart defaults
+
+
+//make color red: using same css override
+
+summary:
+ - common sense usability
+- usablity principle
+-
+Actions: 
+ - separate primary actions
+ 
+Input fields:
+  - avoid optional fields
+  - if not, separate them
+
+Validation Message
+- keep them clear
+- use red 
+----------------
+Extending asp.net identity users : building basic view
+
+ctor then tab//implement constructor
+
+//eager loading with include
+
+
+resharper shortcut; view methods
+//ctrl+F12
+
+
+
+
+How to build and browse
+build: ctrl+sh+b
+browse:ctrl+F5
+
+---------
+extend applicationuser class
+-add additional properties
+-create migration
+-update database
+-modify sign up form
+
+
+---------------
+front end -- css
+//zencoding 
+comes from essentail
+
+//div.date then press tab.
+
+// (div.date>div.month+div.day)+(div.details>span.artist+span.genre)
+
+and tab
+
+here () meaning group 
+> are the children
+
+----
+relative and absolute position
+
+CSS positioning: An element with relative position allows us to absolutely position its children
+
+relative: parent
+absolute: children
+
+
+.gigs>li{
+}//here > symbol means, li is located immediate below gigs
+
+---
+note: build: 
+when we run chrome in ctrl+F5; then any save in html auto refresh in the background
+
+.gigs > li .details {
+    position: absolute;
+    top: 0;
+    left:70px;
+
+}
+//space between li and .details
+
+//two window side by side
+windows+right key
+
+
+to get line break
+set display: block
+//as span here it defaults to inline 
+
+//to make the top down
+body{
+padding-top: 50px;
+}
+
+Summary: 
+- be master front end and back end
+- Relative and absolute positiing
+- Zencoding for html markup
+- css attributes for calendar
+--------------------
+Add a Gig to Calendar
+//
+problem: keeping track of the gigs the user might be attending.
+
+//moral: do not model the universe when creating model
+
+Relational Model (M-M)
+//user(*)-----(<attendance>)-----(*)gigs
+
+//attendance intermediary table
+
+a gig can have many user
+a user can attend many gigs
+
+//column order is the order to break the default ordering 
+and set the right customized order
+
+add db set
+
+//technique for long name class
+instead of typing applicationdbcontext write adbc
+
+
+
+//We need fluentAPI
+//to prevent cascading deleting issue
+//
+
+//using fluent api
+//here no comment used
+just inside comment
+
+
+//to override migration
+add-migration AddAttendance -force
+
+-------------
+building UI- use ajax
+
+use lightweight restful api
+
+api contract
+/api/attendances 
+http post
+gigid is better 
+userid not
+
+userid only authenticated user
+
+//msg from webapi creating time vs2015
+
+-----------
+Visual Studio has added the full set of dependencies for ASP.NET Web API 2 to project 'GigHub'. 
+
+The Global.asax.cs file in the project may require additional changes to enable ASP.NET Web API.
+
+1. Add the following namespace references:
+
+    using System.Web.Http;
+    using System.Web.Routing;
+
+2. If the code does not already define an Application_Start method, add the following method:
+
+    protected void Application_Start()
+    {
+    }
+
+3. Add the following lines to the beginning of the Application_Start method:
+
+    GlobalConfiguration.Configure(WebApiConfig.Regis
+--------
+[FromBody]: by default int; it expect URL, thats why FromBody attribute
+
+
+last: Testing the api with postman
+
+http://localhost:59689/Home/Index
+
+webapi: http based services
+      for building rest services
+  iots 
+ security systems, smart phones, cars
+
+webapi works both rest+wcf
+
+
+//Error resolve
+- to resolve error authentication error: set user, pass and also enable postman interceptor app in the chrome extension enable app with your credential
+
+//Error: resolve
+- to resolve the request entity media type text/plain not supported..
+
+sol: update header content-type .
+
+to write javascript
+@section scripts
+{
+}
+ 
+- jquery source of the event
+* pass the event parameter e
+* then $(e.target) is the source attribute
+
+--------
+select gitid to localchange
+then write the new object properies and vs prompt to change all, select done.
+
+--how to see error?
+select on the browser any position, then inspect, then click the red x icon on the inspect bar top right. u will see the error. 
+
+
+---
+steps:
+- build simple model 
+- migrate the database
+- build an api
+- implmenet the view
+
+Focus only one aspect at a time
+
+-------------
+******** Todo: Exercise: implement follow an artist
+
+In the webapi, 
+  set header and authorization, and if need to pass data, set that inthe body, and set the content type. 
+
+see the output whether it points to any thing, it will indicate something 
+
+
+---------------
+Current software problem: 
+-  does not display update view in homepage
+- duplicate value insert not showing alert/and does not reflected the update in the view
+
+
+Tips build: if you want to debug c# code with javascript in chrome
+then run the by clicking Google Chrome browser then set debug point both c# and chrome dev debug window. 
+
+-----------------
+- if a property is a collection of a class, then that property needs to be initialized in the parent class constructor
+
+- application user can have many follower and many followee. Now, follower and followee both are applicationuser. 
+
+
+//EF FluentAPI does foreign key relationship
+
+for M-M relationship mapping
+
+
+- If in your DB, you have a foreign key to another table and that foreign key is NOT NULL, then use WithRequired, else if it can be NULL, then use WithOptional
+
+- https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/fluent/relationships
+
+
+--only show to authenticated user
+
+
+return back to previous location in visual stuido
+ctrol+ -
+
+IQueryable have the ability to extend the query
+IEnumerable have the ability to iterate the list
+
+alt+enter enter
+ctrl+sh+r =>move to folder
+
+-------------
+implement: view gigs I am attending
+
+linq can not translate to sql so; user.identity.getuserid needs to store in separate variable and then put the variable in the linq.
+
+apply dry principle
+don't repeat yourself
+
+- when 1 view has share by 2 actions then keep them in shared folder
+* Gigs view should be in shared folder as it is shared by gigs and home controller both.
+
+---------
+more reusable css
+
+
+in site.css creates new css which are more reusable and not overriding 
+
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

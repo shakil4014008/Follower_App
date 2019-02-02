@@ -960,11 +960,33 @@ more reusable css
 
 in site.css creates new css which are more reusable and not overriding 
 
------
+--------------------
+Second part
+
+----------------
+in gighub we used client side ajax functionality to call webapi
+
+sometimes reusable not the right option
+
+do not want to make it jack of all trade 
+
+---------
+ctrl+w 
+  select and click w again to select whole block and 
+ctrl+sh+w 
+    to unselect the previous step
+
+eager load: //kind of join another query
+   
+- in eager loading also load related entitiies using Include<> statement, so that we don't need to add separate query for related entities. 
+
+search in the current page: 
+
+--
+to open git in visual studio, go to team exploer, right click on the solution, open command prompt
 
 
-
-
+   
 
 
 

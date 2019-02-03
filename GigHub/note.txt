@@ -986,11 +986,162 @@ search in the current page:
 to open git in visual studio, go to team exploer, right click on the solution, open command prompt
 
 
+if says, permission denied in visual studio and you already in gave permission, 
+then restart visual studio, then, vs should track changes. 
+
+
+
+
+Refactor: Implementing the update
+expression:
+
+hoever over: then edit/delete appears.
+using css 
+
+zencodes
+div.actions then tab
+
+a[href="#"] then put the cursor at the end; then tab
+
+a hover on the div to hide
+
+div {
+    display: none;
+}
+    
+a:hover + div {
+    display: block;
+}
+
+edit
+
+-- always use user id when edit and fetch data for security holde remove
+
+pass anonymous object id
+ new {id = gig.Id}
+
+make sure you build if c# code in the back end.
+
+
+//to display jazz in dropdown
+- remove padding in site.css
+- add height: 44px;
+
    
+//button size changed and then causes issue for anohter and removed the style, so need another way to fix it. 
+
+add bootstrap class: 
+  btn-lg //large 
+
+refactoring; 
+
+adding heading: user property using resharper and then update the class and fill the data from the controller
+
+ ViewBag.Title  is the page title
+ 
+ 
+check all the view call
+
+if we want to refactor action name dynamic, then select the string, create reference property then update those. 
+
+
+create hidden form to remember to remember the action
+
+keep near the header is better 
 
 
 
+sometimes visual studio can not behave the same way..believe it. for different machine
 
+
+in edit: we need to update based on ID property..so...
+
+
+need 1 more refactoring
+
+
+
+remove magic string and use dynamic variable; because that can break entire application.
+
+-- use anonymous method
+
+how to use anonymous method in c#
+Func<input, return> update = (c => c.Update(this))
+
+here update becomes a delegate which will represent update method
+
+now, if we want to create expression, we can use this Func delegate data 
+
+Expression<Func<ControllerName, ActionResult type>> update = (c =>c.update(this));
+
+
+no name in anonymous method
+
+employee class, object, list
+
+list.find(predicate ..its a deligate which is 
+delegate-- function pointer
+create function
+signature
+signature should match delegate
+delegeate is called typesafe pointer
+
+question: find a employee info from a collection where empID = 102.
+i.e. employee = collection.find(102);
+
+
+//step 1
+public static bool FindEmployee(Employee emp){
+return emp.ID == 102;
+}
+
+//step 2
+Predicate<Employee> empPredicate = new 
+Predicate<Employee>(FindEmployee);
+
+//step 3
+
+instead of step 1,2,3 write directly the delegete and pass the input to get the employee object
+
+Employee emp = listEmployee.Find(delegate(Employee emppl){
+return emppl.ID == 102;
+});
+
+
+back to the point:
+  we need expression 1 to determine update
+  we need expression 2 to determine create
+  
+we will create expression which in turn uses anonymous method
+
+ -----------------
+
+  
+
+extra reading:
+
+Question: how netflix or any other keeps tracking whether this user already used this service or not?
+
+1: email, credit card and device
+
+bitcoin----
+ blockchain 
+  use ledger
+  
+bitcoin mining
+asci machine
+cryptomining
+bye bitcoin 
+wildly up, wildy down
+ledger 
+coinbase
+etherium
+ 
+
+
+
+summary: 
+- focus on core use cases first. 
 
 
 

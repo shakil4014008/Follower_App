@@ -155,12 +155,16 @@ h6,
     }
 
 
-    .gigs > li .actions {
-        font-size: 15px;
-        display: none;
+.gigs > li .actions {
+    font-size: 15px;
+    display: none;
+}
+.gigs > li:hover .actions {
+    display: block;
+}
 
-    }
 
-    .gigs > li:hover .actions {
-        display: block;
-    } 
+.one {
+    font-size: 30px;
+    color: red;
+}

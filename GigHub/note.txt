@@ -1142,19 +1142,152 @@ etherium
 
 summary: 
 - focus on core use cases first. 
+- create good foundation
+- remove magic strings
+    very fragile 
+ and use lambda expression for dynamic change detection'
+ 
+ 
+ 
+ -----------------
+ - logical delete; 
+    * undo things
+	* prevent cascade
+ - bootstrap confirm dialog
+ 
+ 
+ to bind data in the link that will be used in ajax call, use the data-* bind attribute
+ 
+ section script written in such a way to make sure javascript and css code loaded before hand. 
+ 
+ 
+ var link = $(e.target); gives the link element
+ 
+ then we need to get the attribute value from it. 
+ 
+ $.ajax uses promise 
+ 
+ .done: if delete operation successful inside the web service call with the parameter, then some additional works need to do after deleint in the database, like css and ui stuff, thats need to be completed. 
+ 
+ parent and child tag in css
+ 
+create: 
+ parent child relation tutorial in css
+body> center > p {
+ }
+ 
+ <body>
+ <center>
+   <p></p>
+ </center>
+ </body>
+ 
+p.edible
+
+here p is paragraph, then edible is class
 
 
+//session data in asp.net
+ cross page postback
+ conext.handler object
+ querystring
+ cookies
+ session state
+ 
+ text1, text2, button
+ 
+ sesssion["Name"] = "";
+ 
+ here Name is key.
+ 
+ Responese.Redirect("~/Webform.aspx");
+ 
+ here ~ root directory
+ 
+ //retrieve the value in the webform.aspx: 
+ string val = session["Name"]
+ 
+ //it can any type of data. it is an object.
+ 
+ 
+session variable stored in lifetime and that controlled by timeout.
+
+sessionstate mode ="InProc"
+
+default is InProc
+
+they store web server memory
+
+if we do not set timeout then default is 2o min
 
 
+cookies in asp.net
+
+send data from one to anohter page
+client info stored.
+small amount of info in client machine
+
+create: 
+//to store the name and email in cookie variable.
+HttpCookie cookie = new HttpCookie("UserInfo");
+cookie["Name"] = txtName.txt;
+cookie["Email] = txtEmail.txt;
+
+//to write in user machine
+use response object
+
+Response.Cookies.Add(cookie);
+Reposne.redirect("Webform2");
 
 
+//now in webform2 we need to read the value
+it is similar to session
+if(cookie!=null){
+
+HttpCookie cookie = Request.Cookies["UserInfo"];
+
+lblName.txt = cookie["Name"];
+}
+//if check cookie is null or not
 
 
+Note: in $.ajax method operation happen in the body; but after operation or post activities happen in success or done state.
 
 
+send data from webform1 to webform2
+
+txtname, txtemail, button
 
 
+Responese.Redirect("~/WebForm2.aspx?UserName"+txtName.text+"&UserEmail="+txtEmail.Text);
 
+querystring is name value pair;
+there is a limit of # of querystring
+- ? to start, need a name, and need to send the data, & to append
+
+In the webform 2: 
+   lblName.text = Request.QueryString["UserName"];
+
+space is now encoded to %20
+
+//we can send using 
+Server.UrlEncode(txtName.Text) 
+//it automatically decoded
+
+& is represented by %20
+
+dJango use for python web
+
+send and receive json object in mvc
+
+
+this object means immediate parent object not grand parent object. 
+
+
+ Todo: 
+ - when click cancel my upcoming gigs; it does not fade out 
+ 
+ 
 
 
 

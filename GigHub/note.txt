@@ -1443,8 +1443,74 @@ Fix: why fadeout was not working?
 use parents instead of parent 
 because here multiple child not single child 
 
+------------------
+how to compare two note.txt file in notepad++
+1. load file1, file2 in notepad++ in two tab
+2. click compare
+
+---------------
+highlight the gigs who cancel their show
+in the Gigs I am attending
+
+Handling edge cases:
 
 
+if second time calls to cancel it should return an error message; 
+
+How to move all the files to a folder ?
+- Organization: use resharper
+ and point to the folder
+1. ctrl+sh+r to open reshaper on the root line of class to move
+2. move to folder and show the folder name
+
+//drag and drop does not work
+
+Here we implementing 
+logical delete, 
+   historically useful for report on historical data
+Bootbox for native javascript alert
+   
+Notification system implementation: 
+- notify gigs cancel or updated. 
+
+start: always start with domain model
+
+Requiremetns:
+user should be notified 
+ gig is canclend gig is udpated, gig is listed
+ 
+Notifications
+ 1. James has cancelled the gig at Paris on 21 nov at 6pm(Cancel) 
+ 2. Bill has changed the date of the gig at Partis form 21 6pm to 22 nov 8pm(Update)
+ 3. John is performing at Rod Laver  on 23 Nov/6PM(Listing)
+ 
+ 
+ ---------------
+ Domain Model
+ - as software engineer, 
+    reduce effprt of changes
+ - inheritance should not be reuse
+-----------------------
+
+should we fullfill all the scenario for future?
+
+*** Solve today's problem in an outstanding way not future problem
+
+
+
+For interview: use notification design 
+ 
+NOtification - ---  NotificationType 
+Notification * -----1 Gig
+Notification*----*UserNotification--Use
+
+----------------------
+
+ NotificationType enum
+ notification class
+ usernotificaiton class
+ 
+ 
 
 
 

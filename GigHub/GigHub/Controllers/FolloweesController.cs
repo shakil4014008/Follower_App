@@ -1,7 +1,7 @@
-﻿using GigHub.Models;
-using Microsoft.AspNet.Identity;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
+using GigHub.Models;
+using Microsoft.AspNet.Identity;
 
 namespace GigHub.Controllers
 {

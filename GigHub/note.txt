@@ -1666,23 +1666,95 @@ State: Fixed invalid state issues.
 Cohesion: higly related object should be together
 -------------------------------------
 
+UI
+map domain object with dto(data transfer object) using api
 
+Building an API
+need an endpoint
+GEt /api/notification
 
+call using jquery
+get the data and render on client
+
+find endpoint: 
+localhost:33/ControllerName/ActionName
 
  
+when calling api: 
+   at first login with the same name use enter in the website; that should be in basic authentication in the postman too.
+   then put the url 
+    now url should start with api/controller name
+	
+	
+Rule: ** we should not expose our domain object from api
+we should return dto not model.
+
+
+-- alt+ent shortcut of resharper...nice...
 
 
 
+-- AutoMapper 
+is a convention based mapping tool.
+
+PM> install-package AutoMapper
+
+dto class to professional name to avoid redundancy
+
+n => new NotificationDto()
+            {
+                DateTime = n.DateTime,
+                Gig = new GigDto
+                {
+                    Artist = new UserDto
+                    {
+                        Id = n.Gig.Artist.Id,
+                        Name = n.Gig.Artist.Name
+                    },
+                    DateTime = n.Gig.DateTime,
+                    Id = n.Gig.Id,
+                    IsCancelled = n.Gig.IsCancelled,
+                    Venue = n.Gig.Venue
+                },
+                OriginalDateTime = n.OriginalDateTime,
+                OriginalVenue = n.OriginalVenue,
+                Type = n.Type
+
+            }
+			
+			
+--instead of this use mapper class
+it remove codes
+
+need single place to all mapping to reuse
 
 
 
+fix: if version does not match and can not install package becuase existing framework or something
+
+solution: try to install another version. 
+
+--configure webapi to return data in camelcase notation: 
+
+use configuration file to update that. 
+
+cursor moves to line head and tail
+shortcut: Fn+home //head
+          Fn+End //tail
+			
+
+
+shortcut:
+Move selected files in a particular folder
+1. select files
+2. ctrl+sh+R
+3. Move to target folder 
+4. enter
 
 
 
-
-
-
-
+only new notification to show
+!IsRead
 
 
 

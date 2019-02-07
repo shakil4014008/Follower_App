@@ -178,6 +178,7 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.OAuth.xm
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.Google.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.InitialModel.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.CreateGigTable.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConventionsForGigsAndGenres.resources
@@ -185,11 +186,12 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddForei
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNameToApplicationUser.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddAttendance.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsCancelledToGig.resources
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.Foo.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsUpdateProperty.resources
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.xml

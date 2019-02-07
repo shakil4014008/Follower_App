@@ -29,7 +29,7 @@
                     @gig.Genre.Name
                 </span>
                 <div class="actions">
-                    <a href="@Url.Action("Edit", "Gigs", new {id = gig.Id})">
+                    <a href="@Url.Action("Edit", "Gigs", new {id = gig.Id})" class="js-update-gig">
                         Edit
                     </a> | 
                     <a href="#" class="js-cancel-gig" data-gig-id="@gig.Id">
@@ -88,7 +88,6 @@
 
             });
 
-         
 
         });
     </script>

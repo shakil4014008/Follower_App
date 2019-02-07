@@ -1649,9 +1649,22 @@ if these happen, meaning something is wrong in the configuration in the classess
  
  Now when that user who creates the gig, cancle all user should get notified. 
  
+ In edit action: we only shows the edit view; to update thi edited part, we use 
  
- 
+Factory method can help to creating methods where variables are valid states. 
 
+making method private
+
+create factory method ; this will help for initialization stuff which will help to not break the null reference exception
+and helps to create cancel, create, update notification. 
+
+private set : meaning set can not be changed. like notification. they are readonly. 
+
+
+State: Fixed invalid state issues. 
+
+Cohesion: higly related object should be together
+-------------------------------------
 
 
 

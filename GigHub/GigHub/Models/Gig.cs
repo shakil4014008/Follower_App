@@ -12,6 +12,8 @@ namespace GigHub.Models
 
 
         public bool IsCancelled { get; private set; }
+
+        public bool IsUpdated { get; private set; }
       
         public ApplicationUser Artist { get; set; }
 
@@ -40,13 +42,27 @@ namespace GigHub.Models
         {
             IsCancelled = true;
 
-            var notification = new Notification
-                (NotificationType.GigCanceled, this);
+            var notification = Notification.GigCanceled(this);
 
             foreach (var attendee in Attendances.Select(a => a.Attendee))
             {
                 attendee.Notify(notification);
             }
+        }
+
+        public void Update(DateTime dateTime, string venue, byte genre)
+        {
+            IsUpdated = true;
+            var notification = Notification.GigUpdated(this, DateTime, Venue);
+            Venue = venue;
+            DateTime = dateTime;
+            GenreId = genre;
+
+            foreach (var attendee in Attendances.Select(a => a.Attendee))
+            {
+                attendee.Notify(notification);
+            }
+
         }
     }
 }

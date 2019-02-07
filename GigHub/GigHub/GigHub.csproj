@@ -265,6 +265,10 @@
     <Compile Include="Migrations\201902071731551_Foo.Designer.cs">
       <DependentUpon>201902071731551_Foo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902071900462_AddIsUpdateProperty.cs" />
+    <Compile Include="Migrations\201902071900462_AddIsUpdateProperty.Designer.cs">
+      <DependentUpon>201902071900462_AddIsUpdateProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
@@ -406,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902071731551_Foo.resx">
       <DependentUpon>201902071731551_Foo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902071900462_AddIsUpdateProperty.resx">
+      <DependentUpon>201902071900462_AddIsUpdateProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

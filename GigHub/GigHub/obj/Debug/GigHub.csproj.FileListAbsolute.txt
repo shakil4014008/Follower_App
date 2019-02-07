@@ -190,3 +190,5 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsCancelledToGig.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.Foo.resources

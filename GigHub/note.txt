@@ -1511,6 +1511,152 @@ Notification*----*UserNotification--Use
  usernotificaiton class
  
  
+------------------------
+pluralsight------------
+domain model analysis is the real modeling
+
+
+now lets code: 
+
+notification-notification type
+notification*-1gig
+notification*-usernotification-*user
+
+
+create class then change it to enum
+the enum  value will be store in database
+
+
+if we want to make 
+notification*-1gig relationship:
+we have to create a Gig object as a property in notification class which will be required. 
+
+---
+from the model we see, notification and user will be connected through usernotification class; now to connect these two classes, usernofiication class needs key and colum attribute with their primary id to make composite key. also to keep navigation property we nee d applicationuser and notificagtion class 
+command: update-database
+
+Fixes: foreign key problem fix
+- cause cycle in multiple cascade
+solution: use fluentapi to stop cascade delete onChange method
+
+
+userNofitication
+.HasRequired(n=>n.User)
+.WithMany()
+.WillCascadeOnDelete()
+
+after doing this chages, we need to run the add-migration again
+
+then update-database
+
+ef 6 mvc 5
+--------
+when user cancel then create a notification
+
+- get the notification
+-get all the users to notify
+
+
+
+---
+musican can signup and list their upcoming gis(shakil4014008)
+follower can see the gigs and some information and all the notification of the gigs changes
+
+-- uml diagram is temporary commmunication tool to understand and analysis problem
+
+no class diagram needed...
+ultimate doc is source code 
+and make it clean
+use composition not inheritance
+
+
+more object oriented design
+
+
+refactorig
+
+anaemic domain model
+
+behaoir rich domain 
+
+as the logic grows in controller , it becomes fat; rather making it fat, we can use soc separation of concern and more behavioru rich model
+
+We need a domain model that protects its state; no null reference exception
+
+to create auto property in the constructor ; click on the property and select the insert auto property
+
+to handle null reference exception in the entity framework:
+ craete a constructor
+ 
+ 
+ because: when we create custom constructor, we should always use default constructor
+ 
+ 
+UserNotification constructor is for EF
+{
+}
+
+conceptually different relationshipt??
+variable shoudl not be avaialble after initialaization
+
+//
+handle null in the notification object too.
+
+if we do not want to change id; then we can set private in the code. 
+
+
+this way we can handle null reference objects. 
+
+-- removes round trip to database 
+  and use eager loading to fix this. 
+
+
+Any collection needs to initialize in the constructor
+
+object being in valid state: make the set private to avoid accidental override the whole collection with another collection
+
+from the collection we can not type attendee; so use select method. 
+
+-------refactoring--for cohesion
+
+highly related things should be together
+in method level.
+
+like we did notify: we will encapsulate cancel method for into highly cohesive module.
+
+shortcut resharper: 
+  when need to add new property to current object: 
+  Alt+Enter and enter
+  
+ //shortuct: how to fix local variable references using resharper
+sol: select one object then press alt+enter then, scroll to the rearrange local variables and then alt+enter and if need add import
+
+---
+now calling data from repository is standard; its not controller responsibility
+- we need some architectureal pattern. 
+
+In google they always wants to remove false positive: 
+
+- EF thinks it changes model, but it didn't then how to fix?
+
+if these happen, meaning something is wrong in the configuration in the classess
+ 
+ if we look onModelCreating and see the modelbuilder in fluent api, then we will see the problem. 
+ 
+ Every user can see upcoming gigs
+ 
+ A user can create his gig or show in his profile and other user can see those gigs
+ 
+ Now when that user who creates the gig, cancle all user should get notified. 
+ 
+ 
+ 
+
+
+
+
+
+ 
 
 
 

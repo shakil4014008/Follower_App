@@ -1972,7 +1972,36 @@ LESS bettr way to write css
 
 CSS 2 Less converter. 
 
+web essential will do for less.
 
+
+
+jqeury: on is for event. 
+
+behavior not real object
+
+doing easily unit testing.
+
+behavior rich domain model
+---------------------
+post like new request...new resource 
+thats why httppost.
+
+
+object is about behavior not bag of data
+
+u can create unit testing without mock or in memory etc.
+
+---use as many tech u learn
+
+Bootstrap events 
+
+summary:
+- here hide comes when click the notification and it removes all the notification.
+
+
+------------------
+search
 
 
 

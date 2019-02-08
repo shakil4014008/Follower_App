@@ -110,6 +110,7 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.dll.config
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.pdb
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Antlr3.Runtime.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\EntityFramework.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\EntityFramework.SqlServer.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.Agent.Intercept.dll
@@ -146,6 +147,7 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.WebPages.Deployment.d
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.WebPages.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.WebPages.Razor.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\WebGrease.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.DependencyCollector.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.Web.xml
@@ -193,5 +195,3 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsUpd
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.xml

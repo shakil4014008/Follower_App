@@ -1756,43 +1756,221 @@ Move selected files in a particular folder
 only new notification to show
 !IsRead
 
+summary:
+Contract of apis 
+- should be dtos
+- u can refine and expose only important and non sensitive data
+
+Mapping domain objects to dtos
+- automapper 
+
+-----------
+UI------------------
+
+in menu in loginpartial view : do zencoding
+  li>a[href="#"]>i.glyphicon
+
+  
+  zencoding
+  span.badge then click tab when the cursor is at the end.//icon to notify
+  
+  to change the position of badge from the globe, we can use absolute, relative css concept.
+  
+ -  make parent class position relative
+ - 
+  
+  
+how to fix css: in Mine.cshtml view?
+because _loginPartialView also do not see the 
+
+
+-- disable and enable cache from chrome network tab in developer tools.
+
+css: how to go beyond the right
+use -ve number
+if 0; no need to put px
+
+here notification returned from the server api: 
+
+   $.getJSON("/api/notifications", function (notifications){
+   
+-----------------
+something cool...
+   
+
+animate.css
+
+https://daneden.github.io/animate.css/
+download css file 
+
+add the css file into the bundleconfig.cs file
+
+-- implement popup using bootstrap
+
+In bootstrap website: goto getboostrap.com/javascript page
+see popover
+
+//at first do hardcode to check
+//then use dynamic data to render
+
+absolute: meaning subtraction
+relative: different of ratio
+
+-- here in popover we can create html attribute and render in the content in popover javascript: However that is poor way. We can make a template and place the view on this content.
+
+ask to templating: we can razor. 
+
+---------underscorejs.org 
+
+//object, function...template..
 
 
 
+if scripts or bootstrap css library file is not under any bundle category we can take different approach
+however, we can attach the name in jquery or csss based on the type of the library file. 
+
+plumbing code: Plumbing code is a code that provides regulations for the design, installation and inspection of building plumbing and sanitary systems. In the U.S., jurisdictions enact their own codes, some of which are based upon model plumbing code
+
+plumbing code of template is working
 
 
+<%= name%> //this is used to evaluate variable
+
+<% %> //if no = sign then we can use logic
 
 
+in layout notificaiton: callback funcions fills the notifications data
 
 
+when we call the api, notifiatiosn data fills. 
+  $.getJSON("/api/notifications", function (notifications) {
+  
+  
+  select the boundary method shortcut
+  ctrl+w
+  
+  userid: "646a3842-03a3-4268-9257-83c8bcfb56f2"
 
 
-
-
-
-
-
+--if notification.type == 1 then do all the logic..
 
 
 
 
  
+ 
+
+Everything you need to know about underscore template is here. Only 3 things to keep in mind:
+
+<%  %> - to execute some code
+<%= %> - to print some value in template
+<%- %> - to print some values HTML escaped
+That's all about it.
+
+Simple example:
+
+var tpl = _.template("<h1>Some text: <%= foo %></h1>");
+then tpl({foo: "blahblah"}) would be rendered to the string <h1>Some text: blahblah</h1>
 
 
 
+  <script type="text/javascript">
+                (function(){
+                    var people = ["Tom","dick", "harry"];
+
+                    _.each(people,
+                        function(name, key) {
+                            console.log(name);
+
+                        });
+
+                });
+            </script>
+			
+--------------------------------
+template is not loading..
+
+
+if no data; simply return without any data. 
+
+-- section script runs at server side.
+
+			
+
+MSC1990155378
+
+
+handle edge cases:
+
+summary: 
+-icon, badges, and popovers
+
+- render view
+   consume the api, and render the view in the client using template
+   
+   helps to reduce the load
+   
+- 
+-----------------------------
+Moment.js library
+
+how to remove last border in css
+
+fix: how to fix underscore.js not loading problem; 
+
+- undo all changes and recreate again
+
+
+template: default html there to make default html. 
 
 
 
+In design choice: we have to think
+what we want to make it bold or different color so, using inline style is not good choice; 
+like <strong></strong>
+instead use span that apply class
+
+don't change markup but stylesheet
+
+update datetime and parese and reformatting it. 
+using moment.js 
+
+list of code smell:
+- modify multiple places
+- repeat of codees
+
+how to use moment function
+
+lotfs of functions and manipulate datetime in moment. 
+
+
+- remove shadow
+
+consolidate bundles
+- 
+
+
+make two to 1 single library bundle
+change in bundle.css and update in where they are called e.g. layout.cshtml
+
+tow bundles
+1. lib: 3rd party
+2. app: 
+
+
+modernizr should be at the head section of the html
 
 
 
+LESS bettr way to write css
+- DRY dont repeat
+- we can do nested code
+- u can define variable
+- spend half an hour
 
 
 
-
-
-
-
+CSS 2 Less converter. 
 
 
 

@@ -53,6 +53,23 @@ span.field-validation-error {
     background-color: rgba(205, 40, 39, 0.55);
 }
 
+.navbar-inverse .notifications {
+    position: relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background: #a80a0a;
+}
+
+.popover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
 .dropdown-menu {
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -167,4 +184,26 @@ h6,
 .one {
     font-size: 30px;
     color: red;
+}
+
+.popover-notifications .popover-content {
+    padding: 0;
+}
+
+.popover-notifications ul.notifications {
+    list-style: none;
+    padding-left: 0;
+}
+
+.popover-notifications ul.notifications > li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.popover-notifications  ul.notifications > li:last-child {
+        border-bottom: none;
+
+    }
+
+.popover-notifications ul.notifications .highlight {
+    font-weight: bold;
 }

@@ -1,11 +1,25 @@
 ﻿@model GigHub.ViewModels.GigsViewModel
 @{
     ViewBag.Title = "Home Page";
-   
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <h1>@Model.Heading</h1>
+@using (Html.BeginForm("Search", "Gigs"))
+{
+    <div class="form-group">
+              
+        <div  id ="searchGigs" class="input-group" >
+            @Html.TextBoxFor(m => m.SearchTerm, new {@class = "form-control", autofocus = "autofocus" , placeholder="Search"})
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-search"></i>
+            </span>
 
+        </div>
+    </div>
+    <input type="submit" value="Search"/>
+}
 
 <ul class="gigs voffset4">
     @foreach (var gig in Model.UpcomingGigs)

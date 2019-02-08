@@ -2003,6 +2003,26 @@ summary:
 ------------------
 search
 
+search input group
+
+getbootstrap.com / components / #input-groups
+
+steps of searching functionality: 
+step 0: use home index functionality
+step1: for giving input value, use input for querystring
+step 2: for bookmark to display last search - in viewmodel set the searchterm = query; where in the search textbox we already set m=>m.searchterm
+
+always check edge cases
+
+--------------------
+1. watermark
+2. remove shadow
+3. remove transition
+
+ 
+
+
+
 
 
 

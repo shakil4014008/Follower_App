@@ -93,18 +93,18 @@ C:\Shakil\Projects\Pluralsight\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFoll
 C:\Shakil\Projects\Pluralsight\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Shakil\Projects\Pluralsight\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Shakil\Projects\Pluralsight\GigHub\GigHub\obj\Debug\GigHub.pdb
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\System.Reflection.Metadata.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\VBCSCompiler.exe
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\ApplicationInsights.config
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\csc.exe
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\System.Collections.Immutable.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\System.Reflection.Metadata.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\vbc.exe
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\VBCSCompiler.exe
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\roslyn\VBCSCompiler.exe.config
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.dll.config
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.dll
@@ -194,3 +194,4 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsUpd
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache

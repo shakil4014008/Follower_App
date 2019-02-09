@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using System.Web.Http;
-using GigHub.Dtos;
+﻿using GigHub.Dtos;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using System.Web.Http;
 
 namespace GigHub.Controllers.Api
 {
@@ -33,6 +33,57 @@ namespace GigHub.Controllers.Api
             _context.SaveChanges();
 
             return Ok();
+        }
+
+
+        //[HttpDelete]
+        //public IHttpActionResult Delete(int id)
+        //{
+        //    try
+        //    {
+        //        var userId = User.Identity.GetUserId();
+
+        //        var entity = _context.Attendances.Any(a => a.AttendeeId == userId && a.GigId == id);
+        //        if (!entity)
+        //        {
+        //            return BadRequest("The attendance already exists.");
+        //        }
+        //        else
+        //        {
+        //            var gig = _context.Gigs
+        //                .Where(a => a.Id == id && a.Artist.Id == userId)
+        //                .Include(a => a.Artist);
+        //            _context.Gigs.Remove(id);
+        //            _context.SaveChanges();
+
+
+        //        }
+
+
+        //        return Ok();
+        //    }
+        //    catch (Exception e)
+        //    {
+
+        //        Request.CreateErrorResponse(HttpStatusCode.BadRequest, e);
+        //    }
+           
+        //}
+
+        [HttpDelete]
+        public IHttpActionResult DeleteAttendance(int id)
+        {
+            var userId = User.Identity.GetUserId();
+
+            var attendance = _context.Attendances
+                .SingleOrDefault(a => a.AttendeeId == userId && a.GigId == id);
+
+            if (attendance == null)
+                return NotFound();
+            _context.Attendances.Remove(attendance);
+            _context.SaveChanges();
+
+            return Ok(id);
         }
     }
 }

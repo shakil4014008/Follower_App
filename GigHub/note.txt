@@ -2019,10 +2019,343 @@ always check edge cases
 2. remove shadow
 3. remove transition
 
+ ------------------------
+ Architecture and testing
+ - decoupling 
+ - unit and integration testing
  
+  assertion and mocking
+ 
+-------------------------------
+what we done
+1.
+add a gig
+
+2. 
+my upcoming gigs
+all upcoming gigs
+
+3.
+edit a gig
+remove a gig
+add a gig to calendar
+follow an artist
+search
+
+
+4.
+view gigs im attending
+who im following
+
+Remaining:
+3
+view gig details
+4
+gig feed
+5
+remove a gig from calendar
+unfollow an artist
+
+------------------------
+give u momnetum
+
+link and show details
+/Gigs/Details/7
+
+- show bold artist name
+- "Performing" + venue + datetime
+- for login user
+  following button
+  I am going to this gig
+
+  
+  shortcut to make 2 split screen
+ Windows+ right arrow //
+  
+  Fn+End
+  Fn+Home
+  
+  selection
+  Fn+sh+End
+  Fn+sh+Home
+  
+  <a href="@Url.Action("Mine", "Gigs")">My Upcoming Gigs</a>
+  
+@Html.ActionLink(@gig.Genre.Name, "Create", "Gigs")
+
+how to send data in /details/id?
+
+in search we pass querystring in the index method. 
+
+
+question: when to use model and when to use Model?
+
+
+question: what is _Viewstart.cshtml
+it is like master page, it executes before all the view execute
+
+ViewData--used liek a session viewData[""]=x//here x could be collection
+ViewBag-- ViewBag.Title
+PartialView -- normal list passed into view, then in html page, iterate and first line:
+@*Iterating Course Model*@
+
+
+TempData-- like viewdata
+ViewModel
+Tuple
+
+
+--------
+when we refresh the data is gone..
+
+that need to fix
+
+the state management saysing about viewData
+
+q: retrieve form values from httppost, dictionary or ..
+
+solution: you can use FormCollection like:
+
+[HttpPost] 
+public ActionResult SubmitAction(FormCollection collection)
+{
+     // Get Post Params Here
+ string var1 = collection["var1"];
+}
+You can also use a class, that is mapped with Form values, and asp.net mvc engine automagically fills it:
+
+//Defined in another file
+class MyForm
+{
+  public string var1 { get; set; }
+}
+
+[HttpPost]
+public ActionResult SubmitAction(MyForm form)
+{      
+  string var1 = form1.Var1;
+}
+
+
+another way: 
+[HttpPost]
+public ActionResult SubmitAction()
+{
+    var value1 = Request["SimpleProp1"];
+    var value2 = Request["SimpleProp2"];
+    var value3 = Request["ComplexProp1.SimpleProp1"];
+    ...
+
+    ... return something ...
+}
+
+
+and another way:
+
+You can also post back a model without using any razor helpers. I have come across that this is needed some times.
+
+public Class MyModel
+{
+  public int HouseNumber { get; set; }
+  public string StreetAddress { get; set; }
+}
+The HTML markup will simply be ...
+
+<input type="text" name="MyHome.HouseNumber" id="whateverid" >
+and your controller(Razor Engine) will intercept the Form Variable "MyHome" and try to build it up and cast it to MyModel.
+
+[HttpPost]
+public ActionResult PostBack(MyModel MyHome){
+    postBack.HouseNumber; //The value user entered
+    postBack.StreetAddress; //the default value of NULL.
+}
+
+another way:
+If you want to get the form data directly from Http request, without any model bindings or FormCollection you can use this:
+
+[HttpPost] 
+public ActionResult SubmitAction() {
+
+    // This will return an string array of all keys in the
+	form.
+    // NOTE: you specify the keys in form by the name attributes e.g:
+    // <input name="this is the key" value="some value" type="test" />
+    var keys = Request.Form.AllKeys;
+
+    // This will return the value for the keys.
+    var value1 = Request.Form.Get(keys[0]);
+    var value2 = Request.Form.Get(keys[1]);
+}
 
 
 
+link: https://stackoverflow.com/questions/5088450/how-to-retrieve-form-values-from-httppost-dictionary-or
+
+how to write inline c# code inside button for class name change dynamically
+
+<button
+	data-gig-id="@gig.Id"
+	class="btn @(Model.Attendances.Contains(gig.Id) ? "btn-info" : "btn-default")  
+		btn-sm pull-right js-toggle-attendance">
+	Going?
+</button>
+
+
+Find references using resharper shortcut
+
+ALT+ F7; do it by keeping the cursor on the text. 
+
+Key: find all references and see any references that could cause null references
+
+In this case, we are watching GigViewModel and fixing any null reference expception possibility by adding attendances property.
+
+Revere part: 
+
+
+key: before refactoring make sure it working.
+
+
+exercise: if gig exist, then delete api endpoint otherwise notfound error
+
+-------------------------
+we can use class for implementing logic during ajax call.
+
+we can load c# code inside the button too.
+
+----------------
+we can bind the data in button using a model 
+
+data-bind-id = @gig.id
+
+
+--------------------
+
+create api endpoint to send delete 
+delete attendance 
+for the given gig
+for the currently logged in user
+
+
+remember: during delete operation in webapi:
+- if fail, return notfound
+  if passs, return ok
+  
+- handle exception
+- handle references
+
+ 
+.SingleOrDefault return the delete object
+
+BadRequest("")//class
+NotFound() //class
+
+during delete use only single object
+
+finally put the id with the Ok(id) which is the restful condition
+
+
+refactoring the javascript code
+----------------------------
+Modularized javascript code
+ testability and code
+ 
+Move all the javascript code to one file. 
+
+Full selection short cut:
+ctrl+W
+
+
+when we create new app in scripts folder update the following places
+1. create app/app.js in scripts folder 
+2. update bundle cs file
+3. update layout file
+
+
+Modularize javascript application
+instead of global initGigs() function
+
+
+
+pattern in c#
+ rebuilding moduel pattern
+ 
+ 
+ IIFE - Immediately Invoked Function Expression (IIFE)
+ 
+ scope of function is bound to single block
+ 
+ 
+In javascritpt, we can create a function inside a function;
+
+
+return is public
+
+revealing module pattern.
+
+var Person = function() {
+   var firstName = "Mosh";
+   
+   var sayHello = function(){
+     console.log(firstName);
+   }
+   
+   return {
+      sayHello: sayHello
+   }
+
+}
+
+// Person.sayHello(); this is reveal
+Person.firstName
+
+
+var GigsConroller = function() {
+
+} (); //IIFE
+
+------------------
+client site controller
+
+
+resharper shortcut: 
+collapse the code
+- keep the cursor end of the  start line
+- hold ctrol+ press m twice
+
+
+
+shortcut:
+ctrl+w //for full method body selection 
+
+-- object make cleaner method
+
+a variable which pointing a reference of a function ;sometimes we call full body of method and sometimes we call partial.
+
+every function is doing its own task and they are independent.
+
+controller should be responsible for raised in the view and update in the view
+-returning the response to that reques
+- controller can perform one or more actions
+- control application logic and 
+- coordinate between te view and the model
+
+
+Serialization is converting the state of an object into a byte stream ...
+
+In java, to do that, we get help from java.io.serializable interface. 
+
+
+
+when javascript files grows larger and larger we need to use http://requirejs.org
+--------------
+
+jquery on method is better
+
+     $(container).on("click", ".js-toggle-attendance", toggleAttendance);
+
+        //$(".js-toggle-attendance").click(toggleAttendance);
+		
+		
 
 
 

@@ -2357,16 +2357,87 @@ jquery on method is better
 		
 		
 
+#usability determination
+see eye movement in the UI controller
+
+.gigs > li .details
+.genre {
+font-size: 14px;
+display: block;
+marging-bottom: 4px;
+}
+-----------------------------
+angular, embar...these to modularize the javascript code
+
+Refactoring towards the clean architecture
+as uncle bob tools..
+
+from entity framework..
+
+actions is too long..
+
+-- extract into separate method
 
 
+#shortcut
+select one variable name then, ctrl+sh+r => inline variable
+
+select list of methods then ctrl+sh+r => refactoring method name
 
 
+Repository: 
+  - model: contains class
+  - controller: contains logic and request and reponse of client request;
+  here controller likes a manager who manages but repo is doer..
+  but
+  - repository: to access domain object interface like helps to store common functionalities...repo is doer
+  
+
+definition of repo: mediates between the domain and data mapping layers using a collection - like interface for accessing domain objects.
+
+martin fowler
+
+benefits:
+ #minimize duplicate duplicate query logic
+  - make reusable query logic
+ #provide better soc
+  
+  #repo use stored procedure or linq
+  # decouples from persistence framework
+  # entity framework does not completely implemented repo pattern, user needs to handle..
+  
+  #a pattern is designed to solve an specific problem
+  #repo removes duplicacies, 
+  
+  # repo can handle complex queries, fat controller, fat services 
+  
 
 
+gig and attended repo
+
+#shortcut
+add new class: ctrl+sh+A
+add private field: Alt+Enter
+
+group related objects
+
+move common parts of methods into repository for reuse and use every where. 
+
+#methods necessary
+HttpNotFound()
+HttpUnauthorizedResult()
 
 
+#inline variable need when we don't need extra variable to hold the value; just use the expression directly.
 
+#shortcut
+ctrl+sh+r for inline variable
 
+-----------------
+spend 10 to 15 min
+
+-------------
+go through gigscontroller and replace all instances of using DBContext with a call to repository
 
 
 

@@ -6,19 +6,21 @@ using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
+using GigHub.Persistence;
 
 namespace GigHub.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private AttendanceRepository _attendanceRepository;
+       
+        private UnitOfWork _unitOfWork;
       
 
         public HomeController()
         {
             _context =  new ApplicationDbContext();
-            _context = new ApplicationDbContext();
+            _unitOfWork = new UnitOfWork(_context);
         }
 
         public ActionResult Index(string query = null)
@@ -37,9 +39,14 @@ namespace GigHub.Controllers
                         g.Venue.Contains(query));
             }
 
+            ILookup<int, Attendance> attendances = null;
             var userId = User.Identity.GetUserId();
-            var attendances = _attendanceRepository.GetFutureAttendances(userId)
-                .ToLookup(a => a.GigId );
+            if (userId != null)
+            {
+                 attendances = _unitOfWork.Attendance.GetFutureAttendances(userId)
+                    .ToLookup(a => a.GigId);
+            }
+               
 
             var viewModel = new GigsViewModel
             {

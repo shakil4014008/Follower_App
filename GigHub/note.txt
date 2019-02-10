@@ -2440,8 +2440,131 @@ spend 10 to 15 min
 go through gigscontroller and replace all instances of using DBContext with a call to repository
 
 
+#shortcut
+find all references
+Alt+F7
+
+this references will ensure all the references being used or not. 
+
+make repo methods general as posible for reuse
+
+clean architecture:
+Hexagonal architecture(port and adapter)
+Onion architecture
+BCE (boundary, control, entity)
 
 
+same objective:
+- highly separation of concern
+
+aim
+--
+independent of frameworks
+independent of UI
+Independent of database
+Testable
+
+IN traditional(arrow direction 
+------------
+represent dependency direction): 
+presentation layer depends on business logic
+
+business depends on data access layer
+
+
+
+now both ui and data access dependent on business logic...!!!!!
+
+
+
+controller and repository are tightly coupled to entity framework which is dbcontext.
+
+can we change EF to another ORM like hibernate????
+
+
+should we go through lot of changes and their consequences...??
+
+we do not need architecture always but sometimes we need to do it.
+
+In team work need more work.
+
+
+we need to references of dbcontext.
+
+
+#repo only relates with dbcontext
+
+Entity framework should completely decoupled from controller and model
+
+#Repository pattern
+domain object in memory
+
+mediates between the domain and data mapping layer using a collection like interface for accessing domain object
+
+#in repo there is no save 
+
+where it should go: 
+Unit of Work: Maintains a list of objects affected by a business transaction and coordinates the writing out of changes  
+
+POEAA - Martin Fowler
+
+-------------
+Persisiting changes
+why save should not be in repo?
+
+if we have 2 repo; should we have save in both repo?
+
+1. git repo
+
+2. genre repo
+
+
+#finally repo should be like collection
+add(object)
+Remove(object)
+Get(Id): object
+
+#UnitOfWork should be talking the database
+Complete()
+
+
+to change all references of multiple fixes: 
+
+1. go one of an error and right click
+2. alt+enter and select change all   variable references
+3. then in the selected line, do the update text and hit enter
+
+
+
+
+#Fix all error of references using resharper
+- select, press alt+enter, from the list of option of resharper tool, select all change, then click on the selected change and hit enter
+
+----------
+Summary
+SOC
+- decouple from EF and make clean separation
+- repository pattern
+- understand of 
+- introduce interfaces...
+
+---------------------
+Programming agains interfaces...
+
+- truly decouple we need interface from entity framework.
+
+Dependency inversion principle
+2 parts
+high level should not depend on low level module, both should independently depend on abstraction
+
+- unit of work is dependent on controller
+
+- coupling or dependency causes rebuild to fix '
+
+solution:
+instead of controller dependent on UnitOfWorks, controller should be dependent on IUnitOfWork
+
+- in this way, we can even change different ORM rather than EF in the UNitofOfWork implementation; but IUnitOfWork will remain the same. 
 
 
 

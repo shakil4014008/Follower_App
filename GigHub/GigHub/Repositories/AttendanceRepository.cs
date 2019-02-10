@@ -13,6 +13,13 @@ namespace GigHub.Repositories
         {
             _context = context;
         }
+       
+
+        public IEnumerable<Attendance> GetAttendance(Gig gig, string userId)
+        {
+            return _context.Attendances
+                .Where(a => a.GigId == gig.Id && a.AttendeeId == userId);
+        }
         public IEnumerable<Attendance> GetFutureAttendances(string userId)
         {
             return _context.Attendances

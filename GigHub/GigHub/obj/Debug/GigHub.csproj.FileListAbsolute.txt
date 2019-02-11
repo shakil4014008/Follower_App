@@ -111,6 +111,7 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\GigHub.pdb
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Antlr3.Runtime.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Castle.Core.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\EntityFramework.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\EntityFramework.SqlServer.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.Agent.Intercept.dll
@@ -135,6 +136,13 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.OAuth.dl
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Web.Infrastructure.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Newtonsoft.Json.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Extensions.Conventions.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Extensions.Factory.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.Common.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.Common.WebHost.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.Mvc.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.WebApi.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Owin.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Net.Http.Formatting.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.Helpers.dll
@@ -146,6 +154,7 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.Razor.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.WebPages.Deployment.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.WebPages.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.WebPages.Razor.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\WebActivatorEx.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\WebGrease.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\AutoMapper.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.DependencyCollector.xml
@@ -154,6 +163,13 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.Web.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.AI.WindowsServer.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.ApplicationInsights.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Extensions.Conventions.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Extensions.Factory.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.Common.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.Common.WebHost.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.Mvc.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Ninject.Web.WebApi.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Net.Http.Formatting.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.Http.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\System.Web.Http.WebHost.xml

@@ -9,13 +9,11 @@ namespace GigHub.Controllers
 {
     public class GigsController : Controller
     {
-        private readonly ApplicationDbContext _context; 
-        private readonly UnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public GigsController()
+        public GigsController(IUnitOfWork iUnitOfWork)
         {
-            _context = new ApplicationDbContext(); 
-            _unitOfWork = new UnitOfWork(_context);
+            _unitOfWork = iUnitOfWork;
         }
 
         public ActionResult Mine()
@@ -72,7 +70,7 @@ namespace GigHub.Controllers
             {
                 Heading = "Edit a Gig",
                 Id = gig.Id,
-                Genres = _context.Genres.ToList(),
+                Genres = new ApplicationDbContext().Genres.ToList(),
                 Date = gig.DateTime.ToString("d MMM yyyy"),
                 Time = gig.DateTime.ToString("HH:mm"),
                 Genre = gig.GenreId,
@@ -92,7 +90,7 @@ namespace GigHub.Controllers
 
             if (!ModelState.IsValid)
             {
-                viewModel.Genres = _context.Genres.ToList();
+                viewModel.Genres = new ApplicationDbContext().Genres.ToList();
                 return View("GigForm", viewModel);
             }
 
@@ -118,7 +116,7 @@ namespace GigHub.Controllers
 
             if (!ModelState.IsValid)
             {
-                viewModel.Genres = _context.Genres.ToList();
+                viewModel.Genres = new ApplicationDbContext().Genres.ToList();
                 return View("GigForm", viewModel);
             }
 
@@ -154,8 +152,8 @@ namespace GigHub.Controllers
             {
                 var userId = User.Identity.GetUserId();
 
-                viewModel.IsAttending = _unitOfWork.Attendance.GetAttendance(gig, userId) != null;
-                viewModel.IsFollowing = _unitOfWork.Following.GetFollowers(gig, userId) !=null;
+                viewModel.IsAttending = _unitOfWork.Attendance?.GetAttendance(gig, userId) != null;
+                viewModel.IsFollowing = _unitOfWork.Following?.GetFollowers(gig, userId) !=null;
 
             }
 

@@ -2566,12 +2566,137 @@ instead of controller dependent on UnitOfWorks, controller should be dependent o
 
 - in this way, we can even change different ORM rather than EF in the UNitofOfWork implementation; but IUnitOfWork will remain the same. 
 
+controller will not be affected.
+
+Iunitofworks
+---------
+complete, 
+gigs: gigrepository
+
+
+DIP
+----
+abstraction should not depend on details. details should depned on abstraction
+
+
+IUnitofWork revised
+------------------
+complete
+Gigs: IGigrepository
 
 
 
+Lets apply DIP
+
+1. make gigrepo to Igigrepo
+
+- open the gigrep and use resharper to extract the interface and corresponding method by shortcut ctrl+sh+R, and select all public methods to insert into the interface
+- Then select the interface and move to a different cs file usign shortcut Alt+enter
 
 
 
+#Even using interface, if interface uses  new keyword to intialize object, then it depends on those objects. 
+
+ public GigsController()
+        {
+            _unitOfWork = new UnitOfWork(new ApplicationDbContext());
+        }
+		
+		change to
+		
+		    public GigsController(IUnitOfWork iUnitOfWork)
+        {
+            _unitOfWork = iUnitOfWork;
+        }
+		
+		now _unitOfWork has no dependency as there is no new keyword in the constructor.
+		
+		
+This is called dependency injection.
+(passing intialization object in constructor instead of new object)
+		
+		
+---------------------------------
+use dependency injection framework needed now.
+
+dip framework knows how to initialize
+object
+
+different dip frameowrks
+----------
+unity,ninject, autofac, structureMap
+
+-------------
+add ninject
+
+3 packages
+
+install-package Ninject.MVC5 -Version:5.2.3.0
+
+install-package Ninject.Web.WebApi -Version:3.3.0
+
+
+Note: version # should be project version number. If not found ,than install new version.  Like here:
+
+Install-Package Ninject.MVC5 -Version 3.3.0
+
+
+done
+------
+if you don't see ninjectwebcommon.cs in app_start, then update from gui package manager console and ninject version; it will update all dependent versions.
+
+configure dip in ninjectwebcommon.cs file.
+
+we have to register all the relevant interfaces in the kernel
+
+e.g. kernel.Bind<IUnitoOfWork>().To<UnitToWork>
+
+//not preferred approach though
+
+- during registering the kernel, it is better using configuraiton rather convension
+- because otherwise you can not find error without runtime analysis
+
+for configuration: use the following:
+#install-package ninject.extensions.conventions
+
+
+#how to find missing files or dowload
+solution: update MV5 package if any package missiong, then it will update dependent packages..
+
+
+
+add the following in the CreateKernel() method after register service 
+
+ kernel.Bind(x =>
+                {
+                    x.FromThisAssembly()
+                        .SelectAllClasses()
+                        .BindDefaultInterface();
+                });
+				
+---------------------------
+
+
+#Fix: if build error,
+solution: try to rebuild again. 
+
+Question: how to confirm Ninject is working?
+Answer: if solution works without initializing EF but passing the value in the constructiron in interface intitializatino, then we can say Ninject is working. 
+
+
+summary: after creating interface and children interface and their implementation, we need to create ninject and register automatically by convention api; then if ninject start working we can see that we do not need to initialize; ninject will automatically inject dependency.
+
+
+select all classes: meaning;  select non abstract classes
+
+----------------
+
+handle null collection:
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
+?. and ?[] null-conditional operators (C# and Visual Basic)
+int? length = customers?.Length; // null if customers is null
+Customer first = customers?[0];  // null if customers is null
+int? count = customers?[0]?.Orders?.Count();  // null if custome
 
 
 

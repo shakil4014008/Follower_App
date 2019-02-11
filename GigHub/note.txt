@@ -2759,6 +2759,46 @@ just drag and drop to persistence folder.
 - then update configuration file and update the refence of changes 
 
 
+#shortcut
+to replace
+ctrol+ H
+------------------------------------
+complexity -- meaning more dependency
+
+if the things are orgnaized then future changes will be better isolated.
+
+without architecture- one day will be devasted
+
+
+Data annotation have problems:
+- we can not make relation with them.
+  fluent api helps in configuration.
+  
+clean way to organization...
+
+Look: gig class all data annotation removed and applicationDBContext onModelChange relation method gets updated
+
+however, it grows...in modelchange..so 
+
+use Entityconfiguration...
+
+
+use entityocnfiguration instead of onModelChange for foreing key references and the confiuration
+
+Keep all the property in sorted order to find easily in the entityconfiguration
+
+and finally update the onModelCreating  the refereces by updating the object. 
+
+update the classes and make configurations classes and relationships
+
+-------------------
+so at the beginning we did not gave complete architecute, we did later....
+
+keep it simple and focu on delivering value
+
+-------------------------------------
+Automated testing..
+
 
 
 

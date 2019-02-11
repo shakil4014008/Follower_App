@@ -2698,14 +2698,65 @@ int? length = customers?.Length; // null if customers is null
 Customer first = customers?[0];  // null if customers is null
 int? count = customers?[0]?.Orders?.Count();  // null if custome
 
+---------------------
+
+Entity Framework
+we have DbSet(add, remove, where)--like repo, DbContext(savechanges)--like complete
+but hidden problem there
+- dbset return iqueryable where controller and service can get fat; however we can extension though, but that not the solution
+- that do not have architecture that forces you to write the right code.
+- differetn orm comes, that could be tightly coupled; more merge conflict issue, more work , more new issue..
+
+
+Benefit of repo
+- minimize duplicate query logic
+- provide better separation of concerns
+- decouples from persisence framework
 
 
 
+summary:
+if we hide EF behind the repository pattern, we will only change on repository pattern, EF will never change and never get impacted. this is clean architecture. 
+- decouple from your application
+- reducing the impact of changes.
+- EF does helps, but repository actually the shild
+
+controller-> IUnitofWork=--> UnitOfWork
 
 
+couple betwen controller and persistence
 
 
+However: 
+controller(high level module) is dependent on persistence(low level module)
 
+controller -> Persistence
+change to
+
+controller -> Core <- Persistence
+
+
+Now:
+Core(IUnitOfWork, IREpository)
+
+Then
+
+Persistence (UnitOfWrok, REpository)
+
+
+Entitties : simple POCO 
+
+Abstractions
+ Entity, dto, viewmodel
+ 
+ 
+Organization
+
+
+### only migration folder dont use resharper
+just drag and drop to persistence folder.
+
+- then update configuration file and update the refence of changes 
 
 
 

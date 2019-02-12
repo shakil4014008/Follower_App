@@ -2970,11 +2970,35 @@ be nice to tech lead
 
 in design doc..put his name..
 
+-----------------------
+TEsting repository
+
+
+Repos ?
+ unit or integration?
+ 
+ integration -slow
+ 
+ unit - fast
+ 
+Pragmatic
+- not change so much
+- unit test is fair enough
+
+-------------------------------------
+setup mock repo
+
+Gig -live musical performer.
+#
+In TDD: we can not even write a error code or we can not build..
+
+
+#make sure we are testing the right code but disabling code
 
 
 
 
-
+#think about various query scenario
 
 
 

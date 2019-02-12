@@ -81,3 +81,5 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Extensions.F
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.csprojResolveAssemblyReference.cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.pdb
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.xml

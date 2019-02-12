@@ -275,6 +275,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Persistence\EntityConfigurations\GigConfiguration.cs" />
+    <Compile Include="Persistence\IApplicationDbContext.cs" />
     <Compile Include="Persistence\Migrations\201901242123260_InitialModel.cs" />
     <Compile Include="Persistence\Migrations\201901242123260_InitialModel.Designer.cs">
       <DependentUpon>201901242123260_InitialModel.cs</DependentUpon>

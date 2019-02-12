@@ -1,19 +1,32 @@
-﻿using System;
+﻿using GigHub.Core.Models;
+using GigHub.Core.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using GigHub.Core.Models;
-using GigHub.Core.Repositories;
 
 namespace GigHub.Persistence.Repositories
 {
     public class GigRepository : IGigRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IApplicationDbContext _context;
 
-        public GigRepository(ApplicationDbContext context)
+        public GigRepository(IApplicationDbContext context)
         {
             _context = context;
+        }
+
+        public IEnumerable<Gig> GetUpComingGigsByArtist(string artistId)
+        {
+           
+
+            return _context.Gigs?
+                .Where(g =>
+                    g.ArtistId == artistId &&
+                    g.DateTime > DateTime.Now &&
+                    !g.IsCancelled)
+                .Include(g => g.Genre)
+                .ToList();
         }
 
         public Gig GetGigWithAttendees(int gigId)
@@ -52,10 +65,7 @@ namespace GigHub.Persistence.Repositories
                 .SingleOrDefault(g => g.Id == id);
         }
 
-        //public Gig GetGig(int id)
-        //{
-        //    return _context.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
-        //}
+    
         public Gig GetGig(int gigId)
         {
             return _context.Gigs

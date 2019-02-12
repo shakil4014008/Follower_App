@@ -4,7 +4,7 @@ using GigHub.Controllers.Api;
 using GigHub.Core;
 using GigHub.Core.Models;
 using GigHub.Core.Repositories;
-using GigHub.Tests.Controllers.Extension;
+using GigHub.Tests.Extension;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Web.Http.Results;

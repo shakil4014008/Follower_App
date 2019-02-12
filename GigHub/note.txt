@@ -2800,17 +2800,175 @@ keep it simple and focu on delivering value
 Automated testing..
 
 
+Testing Controller..TDD
+or code first...
+too costly..
+
+proper way to write unit test..
+-------------------
+Rules of thumb..
+
+---
+----
+Your tests are first-class citizens
+They should be
+- named properly
+- between 5-10 lines
+- have a single responsiblity
+- cleaned and refactored
+
+Test first or code first?
+-- TDD better for expericned 
+
+Unit test tools/libraries
+
+- Moq 
+- FluenAssertions
+
+select project and install moq with version.. 
+
+install-package moq -version:4.2.1510.2205
+
+then: 
+install-package FluentAssertions -version:3.3.0
+
+
+
+------------
+create principle object
+before that create..
+
+install..
+Install-Package Microsoft.AspNet.WebApi.Core -version 5.2.3
 
 
 
 
+------------------
+unit testing - reo asharas naming convention
+book - art of unit testing.
+
+naming conventions:
+-----------------------
+name of test_condition of testing _ expected result
+
+-----------------
+create mock repo in controller
+create mockUnitOfWrk interface 
+interface setup
+
+#shortcut
+test; debug: shortcut
+ctrol+T; ctrl+R
+
+#shortcut
+making unit test case method
+- testm then end of the cursor, press tab
+
+
+how to create custom life template?
+1. make the format you like
+        public void Cancel_Abc_Def()
+e.g. 
+
+2. select test code block->resharper->tools->create live template
+
+3. fill with dollar symbol for each word
+
+4. give a shortcut name, and save done
+
+--------------------
+
+
+#shortcut introduce a global field if inline exist
+ctrl+sh+r in resharper and introduce field
+
+
+#to make a test..
+
+ think what is the result you expect from certain input. thats it. 
+ 
+#sometimes, unit test shows wrong pass, so 
+make sure u test right thing, 
+ comment the production code, which make the test code pass.
+ 
+ 
+ #collapse all
+ ctrl+m+o
+ 
+ 
+ #expand all
+ ctrl+m+l
+ 
+ -------------------
+ instead of constant number(magic #) for unit test to check, we have to use dynamic number.
+ 
+ otherwise we need to change future, when data change..
+ 
+instead of constant use the following
+
+userId+ "-"
+
+hence it is not longer constant...
+
+
+if gig does not exist..
+
+make sure: they pass as they are not following the right path.
 
 
 
+------------------
+not write fragile code
+
+make sure not to write unit test: even unit test pass, but could not fix runt time exception 
 
 
+Integration test for full funtion test.
 
 
+#how to write then?
+ even a method can call n number of child methods, if we decide to test one of a child method and looking the result of that child method, then we have to only write that way. We should not write all the child methods in a unit test. That job will be done by integration test. 
+ 
+ 
+ so test the behavior not implementation
+ 
+ 
+ ------------
+ Benefit:  Unit test refactor the method with confidence.
+ 
+ 
+if small unit works then we can easily merge the child methods into more maintainable codes.
+
+
+write unit test for domain classes..
+
+one integration test..
+
+#make sure: common function or method results does not change behavior...
+
+so create testinitialize method.. 
+
+why unit test
+-catch bugs
+-verify that the code works
+- refactor the code with confidence
+
+-------------------------------------------
+write design docs and then go write code...misconception..
+
+the thing is write main component then start design...
+
+convoluted code, goal and ship...
+apm - action per minute...
+
+per day 1 code
+
+keep it simple
+
+be nice to tech lead
+
+in design doc..put his name..
 
 
 

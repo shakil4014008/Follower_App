@@ -6,11 +6,13 @@ using GigHub.Core;
 using GigHub.Core.Models;
 using GigHub.Core.ViewModels;
 
+
 namespace GigHub.Controllers
 {
     public class GigsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+     
 
         public GigsController(IUnitOfWork iUnitOfWork)
         {

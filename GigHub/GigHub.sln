@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Tests", "GigHub.Tests\GigHub.Tests.csproj", "{6225E168-1C2B-49C4-8C5C-16977FF01932}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{4BAF7110-25FA-4441-89D4-8DCDB0679E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BAF7110-25FA-4441-89D4-8DCDB0679E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BAF7110-25FA-4441-89D4-8DCDB0679E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6225E168-1C2B-49C4-8C5C-16977FF01932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6225E168-1C2B-49C4-8C5C-16977FF01932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6225E168-1C2B-49C4-8C5C-16977FF01932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6225E168-1C2B-49C4-8C5C-16977FF01932}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

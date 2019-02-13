@@ -1,8 +1,11 @@
-﻿using GigHub.Core.Models;
+﻿using FluentAssertions;
+using GigHub.Core.Models;
 using GigHub.Persistence;
 using GigHub.Persistence.Repositories;
+using GigHub.Tests.Extension;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
 using System.Data.Entity;
 
 
@@ -13,31 +16,36 @@ namespace GigHub.Tests.Persistence.Repositories
     {
         private GigRepository _repository;
         private Mock<DbSet<Gig>> _mockGigs;
+        private Mock<DbSet<Attendance>> _mockAttendances;
+
 
         [TestInitialize]
         public void TestInitialize()
         {
-             _mockGigs = new Mock<DbSet<Gig>>();
+            _mockGigs = new Mock<DbSet<Gig>>();
+            _mockAttendances = new Mock<DbSet<Attendance>>();
+
             var mockContext = new Mock<IApplicationDbContext>();
-            _repository = new GigRepository(mockContext.Object);
+            mockContext.SetupGet(c => c.Gigs).Returns(_mockGigs.Object);
+            mockContext.SetupGet(c => c.Attendances).Returns(_mockAttendances.Object);
 
             _repository = new GigRepository(mockContext.Object);
+
+
 
         }
 
         [TestMethod]
-        public void GetUpcomingGigsByArtist_GigIsInThePast_ShouldNotBeReturned()
+        public void GetGigsUserAttending_AttendanceForADifferentUser_ShouldNotBeReturned()
         {
-            //this will not work ---- because this method is not called in all the blocks.
+            var gig = new Gig() { DateTime = DateTime.Now.AddDays(1) };
+            var attendance = new Attendance { Gig = gig, AttendeeId = "1" };
 
+            _mockAttendances.SetSource(new[] { attendance });
 
-            //var gig = new Gig() {DateTime = DateTime.Now.AddDays(-1), ArtistId = "1"};
+            var gigs = _repository.GetGigsUserAttending(attendance.AttendeeId + "-");
 
-            //_mockGigs.SetSource(new [] {gig});
-
-            //var gigs = _repository.GetUpComingGigsByArtist("1");
-
-            //gigs.Should().BeEmpty();
+            gigs.Should().BeEmpty();
         }
 
 

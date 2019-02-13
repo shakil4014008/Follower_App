@@ -14,6 +14,8 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\roslyn\VBCSCompiler.
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\GigHub.Tests.dll.config
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\GigHub.Tests.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\GigHub.Tests.pdb
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.dll
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\FluentAssertions.Core.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\FluentAssertions.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\GigHub.dll
@@ -37,7 +39,6 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.Owin.Secur
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Owin.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\AutoMapper.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Web.Common.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.dll
@@ -48,6 +49,8 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Web.Common.W
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Extensions.Factory.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Castle.Core.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\GigHub.pdb
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\FluentAssertions.pdb
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\FluentAssertions.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\FluentAssertions.Core.pdb
@@ -69,7 +72,6 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Ide
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\AutoMapper.xml
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Web.Common.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.xml
@@ -81,5 +83,3 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Extensions.F
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.csprojResolveAssemblyReference.cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.dll
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.pdb
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.dll
-C:\Shakil\Projects\Git-GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.xml

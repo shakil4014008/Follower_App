@@ -2999,6 +2999,80 @@ In TDD: we can not even write a error code or we can not build..
 
 
 #think about various query scenario
+-------------------------------
+Integration test
+
+bugs in the persistent layer can not be identified in unit testing.
+
+it needs integration testing.
+
+integration test also a unit test
+
+#install nunit
+
+- install-package nunit -version:2.6.3
+
+latest version...code first workflow
+
+make db to latest version
+
+# we need to bring database into latest version
+
+- goto main project and migration folder and find configuration class. and then use that..
+
+- migrator will make the update of database 
+
+
+if everything is right, then we should get a new database called: 
+
+
+aspnet-GigHub-integration
+
+
+
+localdb server name:
+
+(LocalDb)\v11.0
+
+if you do not see the database, then browse in sql server.
+
+
+------------------------------------------------------------------------------------------
+populate and clean 
+
+no garbage
+only exception user; 
+
+add custom attribute 
+
+integration test: make confidence, it can gets the  http users and then can go all the way down to the database
+
+
+here we will not use default mvc user but mock user
+
+-----------------
+dotcover 
+
+what unit test remaining..
+
+it tells which lines are not covered by unit testing
+
+it comes...resharper...cover...
+
+DotCover.....helps to cover all tests....
+
+
+
+--------------------------
+
+
+
+
+
+
+
+
+
 
 
 

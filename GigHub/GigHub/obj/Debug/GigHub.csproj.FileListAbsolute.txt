@@ -101,6 +101,7 @@ C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.OAuth.xm
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.Google.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.InitialModel.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.CreateGigTable.resources
 C:\Shakil\Projects\Git-GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConventionsForGigsAndGenres.resources

@@ -1,7 +1,7 @@
 ﻿using GigHub.Core.Models;
+using GigHub.Persistence.EntityConfigurations;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
-using GigHub.Persistence.EntityConfigurations;
 
 namespace GigHub.Persistence
 {
@@ -13,7 +13,7 @@ namespace GigHub.Persistence
         public DbSet<Following> Followings { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserNotification> UserNotification  { get; set; }
-
+      
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
